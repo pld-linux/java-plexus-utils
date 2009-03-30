@@ -19,6 +19,7 @@ URL:		http://plexus.codehaus.org/plexus-utils/
 BuildRequires:	jpackage-utils
 BuildRequires:	rpm-javaprov
 BuildRequires:	rpmbuild(macros) >= 1.300
+Requires:	java-plexus-container
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -29,8 +30,8 @@ command lines, XML and more.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_javadir}
-install %{SOURCE0} $RPM_BUILD_ROOT%{_javadir}/%{name}-%{version}-%{snap}-%{snapno}.jar
-ln -s %{name}-%{version}-%{snap}-%{snapno}.jar $RPM_BUILD_ROOT%{_javadir}/%{srcname}.jar
+install %{SOURCE0} $RPM_BUILD_ROOT%{_javadir}/%{srcname}-%{version}-%{snap}-%{snapno}.jar
+ln -s %{srcname}-%{version}-%{snap}-%{snapno}.jar $RPM_BUILD_ROOT%{_javadir}/%{srcname}.jar
 
 %clean
 rm -rf $RPM_BUILD_ROOT
