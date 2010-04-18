@@ -24,8 +24,8 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-A collection of various utility classes to ease working with strings, files,
-command lines, XML and more.
+A collection of various utility classes to ease working with strings,
+files, command lines, XML and more.
 
 %prep
 
