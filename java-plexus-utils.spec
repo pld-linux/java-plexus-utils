@@ -1,7 +1,6 @@
 # TODO:
 # - package maven and THEN try to build it from sources
 #
-%include	/usr/lib/rpm/macros.java
 #
 %define		srcname		plexus-utils
 %define		snap		20081115.130716
